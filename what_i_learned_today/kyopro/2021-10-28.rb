@@ -1,13 +1,7 @@
-# https://atcoder.jp/contests/abs/submissions/26848365
-# 結果はWA失敗しているみたい
-x = gets.chomp.split.map(&:to_i)
-y = gets.chomp.split.map(&:to_i)
+# https://atcoder.jp/contests/abs/submissions/26860346
+n = gets.chomp.split.first.to_i
+arr = n.times.map{gets.split.map(&:to_i)}
+set_arr = arr.flatten.uniq
 
-y_sorted = y.sort.reverse
+p set_arr.length
 
-a = y_sorted.select.with_index{|elemnt, index| index.even?}.sum
-b = y_sorted.select.with_index{|elemnt, index| index.odd?}.sum
-
-result = a - b
-
-p result.abs
