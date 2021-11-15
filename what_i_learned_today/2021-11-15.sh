@@ -1,4 +1,4 @@
-cd -- "${0%/*}"
+# cd -- "${0%/*}"
 
 memo_dir="$PWD/memo"
 mkdir -p "${memo_dir}"
