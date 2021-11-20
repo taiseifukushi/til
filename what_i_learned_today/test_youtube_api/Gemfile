@@ -1,0 +1,21 @@
+# frozen_string_literal: true
+
+# ============
+# # メモ
+# # `bundle init`をすることで`Gemfile`の雛形が作られる
+# # 使用したいgemをgemfileに記述する
+
+# $ bundle install --path vendor/bundle
+# ============
+
+source "https://rubygems.org"
+
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
+# gem "rails"
+
+# # ============
+# インストールする`Google::Apis::YoutubeV3::YouTubeService`を使用するためのgemのリポジトリ
+# https://github.com/googleapis/google-api-ruby-client
+# # ============
+gem "google-api-client"
