@@ -14,6 +14,7 @@
 
 require 'google/apis/youtube_v3'
 # require 'yaml'
+# require 'json'
 
 def set_youtube_service
     service = Google::Apis::YoutubeV3::YouTubeService.new
@@ -28,7 +29,7 @@ end
 #     )
 # end
 
-def api
+def channels
     youtube = set_youtube_service
     options = {
         :id => 'UCPyNsNSTUtywkekbDdCA_8Q' #YouTubeチャンネルのIDを指定
@@ -37,5 +38,14 @@ def api
     response = youtube.list_channels("snippet", options)
 end
 
-p api
+def hashed_res
+    channels
+    hashed_channels = channels.to_h
+end
+
+p channels
+p channels.class
+p hashed_res
+p hashed_res.class
+
 
