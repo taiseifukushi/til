@@ -13,13 +13,14 @@
 # ================
 
 require 'google/apis/youtube_v3'
-require 'yaml'
+# require 'yaml'
 
-Youtube = Google::Apis::YoutubeV3 # Alias the module
-service = Youtube::YouTubeService.new
-
-key = YAML.load_file("./credentials.yml")
-service.key = key["api_key"]
+def set_youtube_service
+    service = Google::Apis::YoutubeV3::YouTubeService.new
+    key = YAML.load_file("./credentials.yml")
+    service.key = key["api_key"]
+    service
+end
 
 # def cat_videos
 #     service.key = API_KEY
@@ -27,16 +28,14 @@ service.key = key["api_key"]
 #     )
 # end
 
-options = {
-    :id => 'UCPyNsNSTUtywkekbDdCA_8Q' #YouTubeチャンネルのIDを指定
-}
+def api
+    youtube = set_youtube_service
+    options = {
+        :id => 'UCPyNsNSTUtywkekbDdCA_8Q' #YouTubeチャンネルのIDを指定
+    }
+    # service.list_videos("id,snippet,statistics", max_results: 50, id: "video_id,video_id,...")
+    response = youtube.list_channels("snippet", options)
+end
 
-# service.list_videos("id,snippet,statistics", max_results: 50, id: "video_id,video_id,...")
-response = service.list_channels("snippet", options)
-
-p service
-p response
-p response.class
-
-
+p api
 
