@@ -1,0 +1,59 @@
+current directory: /Users/t.fukushi1129/Documents/tukushi/what_i_lerned_today/test_youtube_api/vendor/bundle/ruby/3.0.0/gems/debase-0.2.4.1/ext
+/Users/t.fukushi1129/.rbenv/versions/3.0.2/bin/ruby -I /Users/t.fukushi1129/.rbenv/versions/3.0.2/lib/ruby/3.0.0 -r ./siteconf20211128-98251-g2uxjs.rb extconf.rb
+checking for vm_core.h... no
+checking for vm_core.h... no
+**************************************************************************
+No source for ruby-3.0.2-p107 (revision 0db68f023372b634603c74fca94588b457be084c) provided with
+debase-ruby_core_source gem. Falling back to ruby-3.0.0-p0.
+**************************************************************************
+checking for vm_core.h... yes
+checking for iseq.h... yes
+checking for version.h... yes
+checking for vm_core.h... yes
+checking for vm_insnhelper.h... yes
+checking for vm_core.h... yes
+checking for method.h... yes
+creating Makefile
+
+current directory: /Users/t.fukushi1129/Documents/tukushi/what_i_lerned_today/test_youtube_api/vendor/bundle/ruby/3.0.0/gems/debase-0.2.4.1/ext
+make DESTDIR\= clean
+
+current directory: /Users/t.fukushi1129/Documents/tukushi/what_i_lerned_today/test_youtube_api/vendor/bundle/ruby/3.0.0/gems/debase-0.2.4.1/ext
+make DESTDIR\=
+compiling breakpoint.c
+compiling context.c
+compiling debase_internals.c
+debase_internals.c:111:8: error: implicit declaration of function 'RHASH_EMPTY_P' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+  if (!RHASH_EMPTY_P(catchpoints)) return;
+       ^
+debase_internals.c:319:25: warning: initializing 'rb_control_frame_t *' (aka 'struct rb_control_frame_struct *') with an expression of type 'const rb_control_frame_t *' (aka 'const struct rb_control_frame_struct *') discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    rb_control_frame_t *start_cfp = RUBY_VM_END_CONTROL_FRAME(TH_INFO(thread));
+                        ^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+debase_internals.c:768:3: warning: incompatible function pointer types passing 'void (VALUE, VALUE)' (aka 'void (unsigned long, unsigned long)') to parameter of type 'VALUE (*)(VALUE, VALUE)' (aka 'unsigned long (*)(unsigned long, unsigned long)') [-Wincompatible-function-pointer-types]
+  rb_define_module_function(mDebase, "set_trace_flag_to_iseq", Debase_set_trace_flag_to_iseq, 1);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/internal/anyargs.h:337:142: note: expanded from macro 'rb_define_module_function'
+#define rb_define_module_function(mod, mid, func, arity)    RBIMPL_ANYARGS_DISPATCH_rb_define_module_function((arity), (func))((mod), (mid), (func), (arity))
+                                                                                                                                             ^~~~~~
+/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/internal/anyargs.h:273:1: note: passing argument to parameter here
+RBIMPL_ANYARGS_DECL(rb_define_module_function, VALUE, const char *)
+^
+/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/internal/anyargs.h:255:72: note: expanded from macro 'RBIMPL_ANYARGS_DECL'
+RBIMPL_ANYARGS_ATTRSET(sym) static void sym ## _01(__VA_ARGS__, VALUE(*)(VALUE, VALUE), int); \
+                                                                       ^
+debase_internals.c:771:3: warning: incompatible function pointer types passing 'void (VALUE, VALUE)' (aka 'void (unsigned long, unsigned long)') to parameter of type 'VALUE (*)(VALUE, VALUE)' (aka 'unsigned long (*)(unsigned long, unsigned long)') [-Wincompatible-function-pointer-types]
+  rb_define_module_function(mDebase, "unset_iseq_flags", Debase_unset_trace_flags, 1);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/internal/anyargs.h:337:142: note: expanded from macro 'rb_define_module_function'
+#define rb_define_module_function(mod, mid, func, arity)    RBIMPL_ANYARGS_DISPATCH_rb_define_module_function((arity), (func))((mod), (mid), (func), (arity))
+                                                                                                                                             ^~~~~~
+/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/internal/anyargs.h:273:1: note: passing argument to parameter here
+RBIMPL_ANYARGS_DECL(rb_define_module_function, VALUE, const char *)
+^
+/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/internal/anyargs.h:255:72: note: expanded from macro 'RBIMPL_ANYARGS_DECL'
+RBIMPL_ANYARGS_ATTRSET(sym) static void sym ## _01(__VA_ARGS__, VALUE(*)(VALUE, VALUE), int); \
+                                                                       ^
+3 warnings and 1 error generated.
+make: *** [debase_internals.o] Error 1
+
+make failed, exit code 2
