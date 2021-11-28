@@ -1,5 +1,11 @@
 # test_vuejs3
 
+- 公式ドキュメント https://cli.vuejs.org/guide/
+## Create Project
+```
+vue create test_vuejs
+```
+
 ## Project setup
 ```
 npm install
