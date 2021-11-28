@@ -32,7 +32,7 @@ github_username:  jekyll
 # ==========
 domain: tukushi12.github.io       # HTTPSを強制したいなら、ドメインの先頭でhttpを指定しない。例: example.com
 url: https://tukushi12.github.io  # サイトのベースのホスト名とプロトコル。例: http://example.com
-baseurl: /docs      # サイトがサブフォルダで提供されるならフォルダ名を置く
+baseurl: /      # サイトがサブフォルダで提供されるならフォルダ名を置く
 # ==========
 
 # Build settings
