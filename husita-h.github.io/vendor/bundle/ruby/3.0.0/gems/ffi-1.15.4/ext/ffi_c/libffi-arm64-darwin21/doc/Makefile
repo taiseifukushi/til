@@ -13,7 +13,7 @@
 # PARTICULAR PURPOSE.
 
 
-VPATH = /Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/doc
+VPATH = /Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/doc
 am__is_gnu_make = { \
   if test -z '$(MAKELEVEL)'; then \
     false; \
@@ -203,16 +203,16 @@ am__uninstall_files_from_dir = { \
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 am__DIST_COMMON = $(srcdir)/Makefile.in mdate-sh texinfo.tex
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} '/Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/missing' aclocal-1.16
+ACLOCAL = ${SHELL} '/Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/missing' aclocal-1.16
 ALLOCA = 
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AM_LTLDFLAGS = 
 AM_RUNTESTFLAGS = 
 AR = ar
-AUTOCONF = ${SHELL} '/Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/missing' autoconf
-AUTOHEADER = ${SHELL} '/Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/missing' autoheader
-AUTOMAKE = ${SHELL} '/Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/missing' automake-1.16
+AUTOCONF = ${SHELL} '/Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/missing' autoconf
+AUTOHEADER = ${SHELL} '/Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/missing' autoheader
+AUTOMAKE = ${SHELL} '/Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/missing' automake-1.16
 AWK = awk
 CC = clang -fdeclspec
 CCAS = clang -fdeclspec
@@ -257,9 +257,9 @@ LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 MAINT = #
-MAKEINFO = ${SHELL} '/Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/missing' makeinfo
+MAKEINFO = ${SHELL} '/Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/missing' makeinfo
 MANIFEST_TOOL = :
-MKDIR_P = /Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/install-sh -c -d
+MKDIR_P = /Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/install-sh -c -d
 NM = nm
 NMEDIT = nmedit
 OBJDUMP = objdump
@@ -286,10 +286,10 @@ TARGET = AARCH64
 TARGETDIR = aarch64
 TARGET_OBJ =  src/aarch64/ffi.lo src/aarch64/sysv.lo
 VERSION = 3.3
-abs_builddir = /Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi-arm64-darwin21/doc
-abs_srcdir = /Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/doc
-abs_top_builddir = /Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi-arm64-darwin21
-abs_top_srcdir = /Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi
+abs_builddir = /Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi-arm64-darwin21/doc
+abs_srcdir = /Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/doc
+abs_top_builddir = /Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi-arm64-darwin21
+abs_top_srcdir = /Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi
 ac_ct_AR = ar
 ac_ct_CC = 
 ac_ct_CXX = g++
@@ -320,7 +320,7 @@ host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/install-sh
+install_sh = ${SHELL} /Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -335,7 +335,7 @@ psdir = ${docdir}
 runstatedir = ${localstatedir}/run
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
-srcdir = /Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/doc
+srcdir = /Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi/doc
 sys_symbol_underscore = yes
 sysconfdir = ${prefix}/etc
 target = aarch64-apple-darwin21
@@ -347,7 +347,7 @@ toolexecdir = ${libdir}/gcc-lib/$(target_alias)
 toolexeclibdir = ${libdir}
 top_build_prefix = ../
 top_builddir = ..
-top_srcdir = /Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi
+top_srcdir = /Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.4/ext/ffi_c/libffi
 info_TEXINFOS = libffi.texi
 all: all-am
 

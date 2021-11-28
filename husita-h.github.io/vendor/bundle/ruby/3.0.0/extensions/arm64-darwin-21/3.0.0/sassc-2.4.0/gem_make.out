@@ -1,11 +1,11 @@
-current directory: /Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
-/Users/t.fukushi1129/.rbenv/versions/3.0.2/bin/ruby -I /Users/t.fukushi1129/.rbenv/versions/3.0.2/lib/ruby/3.0.0 -r ./siteconf20211128-63263-baeine.rb extconf.rb
+current directory: /Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
+/Users/t.fukushi1129/.rbenv/versions/3.0.2/bin/ruby -I /Users/t.fukushi1129/.rbenv/versions/3.0.2/lib/ruby/3.0.0 -r ./siteconf20211128-77684-w7d5zu.rb extconf.rb
 creating Makefile
 
-current directory: /Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
+current directory: /Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
 make DESTDIR\= clean
 
-current directory: /Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
+current directory: /Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
 make DESTDIR\=
 compiling ./libsass/src/ast.cpp
 compiling ./libsass/src/ast2c.cpp
@@ -75,6 +75,6 @@ compiling ./libsass/src/util_string.cpp
 compiling ./libsass/src/values.cpp
 linking shared-object sassc/libsass.bundle
 
-current directory: /Users/t.fukushi1129/Documents/tukushi/what_i_learned_today/github_pages/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
+current directory: /Users/t.fukushi1129/Documents/tukushi/tukushi12.github.io/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20211128-63263-twgr76/sassc
+/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20211128-77684-45rywx/sassc
