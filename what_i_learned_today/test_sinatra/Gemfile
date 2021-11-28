@@ -13,3 +13,9 @@ gem "sinatra"
 gem "webrick", "~> 1.7"
 
 
+
+gem "sinatra-reloader", "~> 1.0"
+
+gem "haml", "~> 5.2"
+
+gem "pry-byebug", "~> 3.9"
