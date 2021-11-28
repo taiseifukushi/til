@@ -1,8 +1,0 @@
-current directory: /Users/t.fukushi1129/Documents/tukushi/what_i_lerned_today/test_youtube_api/vendor/bundle/ruby/3.0.0/gems/ruby-debug-ide-0.7.3/ext
-/Users/t.fukushi1129/.rbenv/versions/3.0.2/bin/ruby mkrf_conf.rb
-Installing base gem
-Building native extensions. This could take a while...
-Building native extensions. This could take a while...
-
-current directory: /Users/t.fukushi1129/Documents/tukushi/what_i_lerned_today/test_youtube_api/vendor/bundle/ruby/3.0.0/gems/ruby-debug-ide-0.7.3/ext
-/Users/t.fukushi1129/.rbenv/versions/3.0.2/bin/ruby -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/lib/ruby/3.0.0 -rrubygems /Users/t.fukushi1129/Documents/tukushi/what_i_lerned_today/test_youtube_api/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/exe/rake RUBYARCHDIR\=/Users/t.fukushi1129/Documents/tukushi/what_i_lerned_today/test_youtube_api/vendor/bundle/ruby/3.0.0/extensions/arm64-darwin-21/3.0.0/ruby-debug-ide-0.7.3 RUBYLIBDIR\=/Users/t.fukushi1129/Documents/tukushi/what_i_lerned_today/test_youtube_api/vendor/bundle/ruby/3.0.0/extensions/arm64-darwin-21/3.0.0/ruby-debug-ide-0.7.3
