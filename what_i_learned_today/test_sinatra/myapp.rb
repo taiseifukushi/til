@@ -4,6 +4,8 @@ require 'sinatra/reloader'
 require 'haml'
 require "pry"
 
+# sinatraドキュメント
+# http://sinatrarb.com/intro-ja.html
 # bundle exec ruby myapp.rb でサーバーを起動
 # http://localhost:4567/ にアクセスする
 
