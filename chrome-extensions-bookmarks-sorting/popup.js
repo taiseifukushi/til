@@ -1,167 +1,94 @@
-// Copyright 2021 Google LLC
+// document.addEventListener("DOMContentLoaded", function () {
+// 	console.log("`sorting.js:`, `DOMContentLoaded`");
+// });
+
+// ==========
+
+let get_button = document.getElementById("getBtn");
+let sync_button = document.getElementById("syncBtn");
+let sort_button = document.getElementById("sortBtn");
+let delete_button = document.getElementById("deleteBtn");
+
+get_button.addEventListener("click", () => {
+	insertNodesGet();
+});
+
+sync_button.addEventListener("click", () => {
+	insertNodesSync();
+});
+
+sort_button.addEventListener("click", () => {
+	console.log("sortBtnが押されました");
+});
+
+delete_button.addEventListener("click", () => {
+	document.getElementById("list2").textContent = "";
+});
+
+// ==========
+// 要素を挿入する(テスト)
+function insertNodesGet() {
+	const list1 = document.getElementById("list1");
+	list1.insertAdjacentHTML("beforeend", "<li>insertNodesGet()</li>");
+}
+
+// 要素を挿入する(テスト)
+function insertNodesSync() {
+	const list2 = document.getElementById("list2");
+	// const v = dumpTreeNodes();
+	chrome.bookmarks.getTree().then((result) => {
+		console.log(result);
+		// let s = result[0]["children"][0]["children"];
+		let s = result[0]["children"][0]["children"].map((value) => {
+			// alert(value);
+			return value["url"];
+		});
+		for (var i = 0; i < s.length; i++) {
+			list2.insertAdjacentHTML("beforeend", `<li>${s}</li>`);
+		}
+	});
+	// const v = pullStorage();
+}
+
 //
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file or at
-// https://developers.google.com/open-source/licenses/bsd
 
-// Search the bookmarks when entering the search keyword.
-$('#search').change(function () {
-  $('#bookmarks').empty();
-  dumpBookmarks($('#search').val());
-});
+// function test() {
+// 	chrome.bookmarks.getTree();
+// }
 
-// Traverse the bookmark tree, and print the folder and nodes.
-function dumpBookmarks(query) {
-  var bookmarkTreeNodes = chrome.bookmarks.getTree(function (bookmarkTreeNodes) {
-    $('#bookmarks').append(dumpTreeNodes(bookmarkTreeNodes, query));
-  });
-}
+// Storageから取り出す(テスト)
+// function pullStorage() {
+// 	chrome.storage.sync.get("k", (result) => {
+// 		console.log("Value currently is " + result);
+// 		dumpTreeNodes(result);
+// 	});
+// }
 
-function dumpTreeNodes(bookmarkNodes, query) {
-  var list = $('<ul>');
-  for (var i = 0; i < bookmarkNodes.length; i++) {
-    list.append(dumpNode(bookmarkNodes[i], query));
-  }
+// chrome.storage.sync.get(["key"], function (result) {
+// 	console.log("Value currently is " + result.key);
+// });
 
-  return list;
-}
+// // localStorageに保存する(テスト)
+// function intoLocalStorage() {
+// 	let s = localStorage.setItem(getTreeNodes());
+// 	let s2 = localStorage.setItem({ key: "value" });
+// 	console.log(s);
+// 	console.log(s2);
+// }
 
-function dumpNode(bookmarkNode, query) {
-  if (bookmarkNode.title) {
-    if (query && !bookmarkNode.children) {
-      if (String(bookmarkNode.title.toLowerCase()).indexOf(query.toLowerCase()) == -1) {
-        return $('<span></span>');
-      }
-    }
+// ==========
+// 取得したブックマーク(bookmarkNodes)から、必要なものだけdumpして取り出す
+// function dumpTreeNodes(treeNode) {
+// 	// treeNode.map((_v) => {
+// 	// 	console.log(_v);
+// 	// });
+// 	console.log(treeNode);
+// 	alert(treeNode);
+// 	return treeNode;
+// }
 
-    var anchor = $('<a>');
-    anchor.attr('href', bookmarkNode.url);
-    anchor.text(bookmarkNode.title);
+// dumpして取り出したブックマークをポップアップ(HTML)に埋め込む
 
-    /*
-     * When clicking on a bookmark in the extension, a new tab is fired with
-     * the bookmark url.
-     */
-    anchor.click(function () {
-      chrome.tabs.create({ url: bookmarkNode.url });
-    });
+// sortする関数
 
-    var span = $('<span>');
-    var options = bookmarkNode.children ?
-      $('<span>[<a href="#" id="addlink">Add</a>]</span>') :
-      $('<span>[<a id="editlink" href="#">Edit</a> <a id="deletelink" ' +
-        'href="#">Delete</a>]</span>');
-    var edit = bookmarkNode.children ? $('<table><tr><td>Name</td><td>' +
-      '<input id="title"></td></tr><tr><td>URL</td><td><input id="url">' +
-      '</td></tr></table>') : $('<input>');
-
-      // Show add and edit links when hover over.
-    span.hover(function () {
-      span.append(options);
-      $('#deletelink').click(function (event) {
-        console.log(event)
-        $('#deletedialog').empty().dialog({
-          autoOpen: false,
-          closeOnEscape: true,
-          title: 'Confirm Deletion',
-          modal: true,
-          show: 'slide',
-          position: {
-            my: "left",
-            at: "center",
-            of: event.target.parentElement.parentElement
-          },
-          buttons: {
-            'Yes, Delete It!': function () {
-              chrome.bookmarks.remove(String(bookmarkNode.id));
-              span.parent().remove();
-              $(this).dialog('destroy');
-            },
-            Cancel: function () {
-              $(this).dialog('destroy');
-            }
-          }
-        }).dialog('open');
-      });
-      $('#addlink').click(function (event) {
-        edit.show();
-        $('#adddialog').empty().append(edit).dialog({
-          autoOpen: false,
-          closeOnEscape: true,
-          title: 'Add New Bookmark',
-          modal: true,
-          show: 'slide',
-          position: {
-            my: "left",
-            at: "center",
-            of: event.target.parentElement.parentElement
-          },
-          buttons: {
-            'Add': function () {
-              edit.hide();
-              chrome.bookmarks.create({
-                parentId: bookmarkNode.id,
-                title: $('#title').val(), url: $('#url').val()
-              });
-              $('#bookmarks').empty();
-              $(this).dialog('destroy');
-              window.dumpBookmarks();
-            },
-            'Cancel': function () {
-              edit.hide();
-              $(this).dialog('destroy');
-            }
-          }
-        }).dialog('open');
-      });
-      $('#editlink').click(function (event) {
-        edit.show();
-        edit.val(anchor.text());
-        $('#editdialog').empty().append(edit).dialog({
-          autoOpen: false,
-          closeOnEscape: true,
-          title: 'Edit Title',
-          modal: true,
-          show: 'fade',
-          position: {
-            my: "left",
-            at: "center",
-            of: event.target.parentElement.parentElement
-          },
-          buttons: {
-            'Save': function () {
-              edit.hide();
-              chrome.bookmarks.update(String(bookmarkNode.id), {
-                title: edit.val()
-              });
-              anchor.text(edit.val());
-              options.show();
-              $(this).dialog('destroy');
-            },
-            'Cancel': function () {
-              edit.hide();
-              $(this).dialog('destroy');
-            }
-          }
-        }).dialog('open');
-      });
-      options.fadeIn();
-    },
-
-      // unhover
-      function () {
-        options.remove();
-      }).append(anchor);
-  }
-
-  var li = $(bookmarkNode.title ? '<li>' : '<div>').append(span);
-  if (bookmarkNode.children && bookmarkNode.children.length > 0) {
-    li.append(dumpTreeNodes(bookmarkNode.children, query));
-  }
-
-  return li;
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  dumpBookmarks();
-});
+// sortボタンのイベントリスナー

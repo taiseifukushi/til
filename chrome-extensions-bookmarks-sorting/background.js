@@ -4,7 +4,7 @@ chrome.runtime.onInstalled.addListener(() => {
 		console.log(res[0]["children"][0]["children"]);
 		console.log(res[0]["children"][0]["children"].length);
 		let setNodes = res[0]["children"][0]["children"].length;
-		chrome.storage.sync.set({ k: setNodes });
+		chrome.storage.sync.set({ _k: setNodes });
 	});
 });
 
