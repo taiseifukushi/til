@@ -1,4 +1,4 @@
-# ブックマークをソートする拡張機能
+# ブックマークをソートする拡張機能(作成中)
 
 参考：
 https://github.com/tukushi12/chrome-extensions-samples/tree/main/examples/bookmarks
