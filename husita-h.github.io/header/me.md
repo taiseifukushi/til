@@ -4,6 +4,6 @@ title: "Me"
 permalink: /header/me
 ---
 
-# Meページ
+# Me
 
 改修中
