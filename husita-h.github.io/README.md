@@ -1,4 +1,4 @@
-# husita666.github.io
+# husita_h.github.io
 ## Reference
 https://docs.github.com/ja/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll
 
