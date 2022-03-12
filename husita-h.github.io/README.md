@@ -14,4 +14,4 @@ $ bundle exec jekyll serve
 
 ## URL
 
-https://husita_h.github.io/
+https://husita-h.github.io/
