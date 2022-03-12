@@ -25,11 +25,11 @@ description: >- # this means to ignore newlines until "baseurl:"
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: husita_h
-github_username:  husita_h
+github_username:  husita-h
 
 # ==========
-domain: husita_h.github.io     # HTTPSを強制したいなら、ドメインの先頭でhttpを指定しない。例: example.com
-url: https://husita_h.github.io  # サイトのベースのホスト名とプロトコル。例: http://example.com
+# domain: husita_h.github.io     # HTTPSを強制したいなら、ドメインの先頭でhttpを指定しない。例: example.com
+# url: https://husita_h.github.io  # サイトのベースのホスト名とプロトコル。例: http://example.com
 # baseurl: /      # サイトがサブフォルダで提供されるならフォルダ名を置く
 # ==========
 
