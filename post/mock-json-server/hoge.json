@@ -1,0 +1,16 @@
+{
+  "hoge": [
+    {
+      "id": 0,
+      "value": "HOGE"
+    },
+    {
+      "id": 1,
+      "value": "FUGA"
+    },
+    {
+      "id": 2,
+      "value": "PIYO"
+    }
+  ]
+}
