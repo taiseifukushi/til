@@ -28,8 +28,8 @@ twitter_username: husita_h
 github_username:  husita-h
 
 # ==========
-# domain: husita_h.github.io     # HTTPSを強制したいなら、ドメインの先頭でhttpを指定しない。例: example.com
-# url: https://husita_h.github.io  # サイトのベースのホスト名とプロトコル。例: http://example.com
+domain: husita-h.github.io     # HTTPSを強制したいなら、ドメインの先頭でhttpを指定しない。例: example.com
+url: https://husita-h.github.io  # サイトのベースのホスト名とプロトコル。例: http://example.com
 # baseurl: /      # サイトがサブフォルダで提供されるならフォルダ名を置く
 # ==========
 
