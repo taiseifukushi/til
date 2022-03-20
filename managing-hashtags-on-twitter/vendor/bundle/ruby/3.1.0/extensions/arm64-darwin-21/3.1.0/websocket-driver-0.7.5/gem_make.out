@@ -1,0 +1,15 @@
+current directory: /Users/tfukushi/Documents/keep/managing-hashtags-on-twitter/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/Users/tfukushi/.rbenv/versions/3.1.1/bin/ruby -I /Users/tfukushi/.rbenv/versions/3.1.1/lib/ruby/3.1.0 -r ./siteconf20220320-26169-ixtt6s.rb extconf.rb
+creating Makefile
+
+current directory: /Users/tfukushi/Documents/keep/managing-hashtags-on-twitter/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= clean
+
+current directory: /Users/tfukushi/Documents/keep/managing-hashtags-on-twitter/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\=
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/tfukushi/Documents/keep/managing-hashtags-on-twitter/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20220320-26169-3s4tfp
