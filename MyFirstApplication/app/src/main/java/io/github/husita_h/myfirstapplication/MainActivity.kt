@@ -1,5 +1,6 @@
 package io.github.husita_h.myfirstapplication
 
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.ComponentActivity
@@ -137,7 +138,21 @@ fun OnboardingScreen(onContinueClicked: () -> Unit) {
 @Composable
 fun DefaultPreview() {
     MyFirstApplicationTheme {
-        MyApp()
+        Greetings()
+    }
+}
+
+@Preview(
+    showBackground = true,
+    widthDp = 320,
+    uiMode = UI_MODE_NIGHT_YES,
+    name = "DefaultPreviewDark"
+)
+@Preview(showBackground = true, widthDp = 320)
+@Composable
+fun DefaultDarkModePreview() {
+    MyFirstApplicationTheme {
+        Greetings()
     }
 }
 
