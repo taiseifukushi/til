@@ -25,6 +25,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.text.font.FontWeight
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -85,13 +86,23 @@ private fun Greeting(name: String) {
         modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
     ) {
         Row(modifier = Modifier.padding(24.dp)){
+            // Column(modifier = Modifier
+            //     .weight(1f)
+            //     .padding(bottom = extraPadding.coerceAtLeast(0.dp))
+            // )
+            // {
+            //     Text(text = "Hello,")
+            //     Text(text = name)
+            // }
             Column(modifier = Modifier
                 .weight(1f)
-                .padding(bottom = extraPadding.coerceAtLeast(0.dp))
-            )
+                .padding(bottom = extraPadding.coerceAtLeast(0.dp)))
             {
-                Text(text = "Hello,")
-                Text(text = name)
+                Text(text = "Hello, ")
+                Text(text = name, style = MaterialTheme.typography.h4.copy(
+                        fontWeight = FontWeight.ExtraBold
+                    )
+                )
             }
             OutlinedButton(
                 onClick = { expanded = !expanded }
