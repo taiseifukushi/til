@@ -17,6 +17,8 @@ import io.github.husita_h.myfirstapplication.ui.theme.MyFirstApplicationTheme
 import androidx.compose.material.Button as Button
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 
@@ -45,7 +47,6 @@ fun MyApp() {
 @Composable
 private fun Greetings(names: List<String> = listOf("World", "Compose")) {
     Column(modifier = Modifier.padding(vertical = 4.dp)) {
-        for (name in names) {
             Greeting(name = name)
         }
     }
