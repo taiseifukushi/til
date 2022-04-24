@@ -1,0 +1,15 @@
+current directory: /Users/tfukushi/Documents/keep/managing-hashtags-on-twitter/rails-app/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/tfukushi/.rbenv/versions/3.1.1/bin/ruby -I /Users/tfukushi/.rbenv/versions/3.1.1/lib/ruby/3.1.0 -r ./siteconf20220320-26715-6u6e5g.rb extconf.rb
+creating Makefile
+
+current directory: /Users/tfukushi/Documents/keep/managing-hashtags-on-twitter/rails-app/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= clean
+
+current directory: /Users/tfukushi/Documents/keep/managing-hashtags-on-twitter/rails-app/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\=
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/tfukushi/Documents/keep/managing-hashtags-on-twitter/rails-app/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20220320-26715-4oyqkz/skiptrace/internal
