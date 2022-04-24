@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.foundation.layout.*
@@ -64,25 +65,18 @@ private fun Greetings(names: List<String> = List(1000) { "$it" } ) {
 @Composable
 private fun Greeting(name: String) {
     // 初期値をセット
-    /* State と MutableState は、
-    なんらかの値を保持し、
-    その値が変化するたびに UI の更新（再コンポジション）を
-    トリガーするインターフェースです。
+    /* `State`と`MutableState`はなんらかの値を保持し、
+    その値が変化するたびにUIの更新(再コンポジションをトリガーするインターフェースです。
      */
-    var expanded = remember {
-        mutableStateOf(false)
-    }
+    var expanded by remember { mutableStateOf(false) }
 
-    var extraPadding =  if (expanded.value) {
-                            48.dp
-                        }else{
-                            0.dp
-                        }
+    val extraPadding by animateDpAsState(
+        if (expanded) 48.dp else 0.dp
+    )
 
     Surface(
         color = MaterialTheme.colors.primary,
-        modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp
-        )
+        modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
     ) {
         Row(modifier = Modifier.padding(24.dp)){
             Column(modifier = Modifier
@@ -94,17 +88,9 @@ private fun Greeting(name: String) {
                 Text(text = name)
             }
             OutlinedButton(
-                onClick = {
-                    expanded.value = !expanded.value
-                }
+                onClick = { expanded = !expanded }
             ) {
-               Text(
-                   if (expanded.value) {
-                       "Show Less!"
-                   }else{
-                       "Show More!"
-                   }
-               )
+                Text(if (expanded) "Show less" else "Show more")
             }
         }
     }
