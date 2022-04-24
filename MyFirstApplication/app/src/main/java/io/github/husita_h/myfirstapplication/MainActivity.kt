@@ -26,6 +26,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 
 class MainActivity : ComponentActivity() {
@@ -108,7 +109,7 @@ private fun Greeting(name: String) {
             OutlinedButton(
                 onClick = { expanded = !expanded }
             ) {
-                Text(if (expanded) "Show less" else "Show more")
+                Text(if (expanded) stringResource(R.string.show_less) else stringResource(R.string.show_more))
             }
         }
     }
