@@ -1,0 +1,44 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
+# gem "rails"
+
+# ============
+# # メモ
+# # `bundle init`をすることで`Gemfile`の雛形が作られる
+# # 使用したいgemをgemfileに記述する
+
+# $ bundle install --path vendor/bundle
+
+# `Google::Apis::YoutubeV3::YouTubeService`を使用するためのgemのリポジトリ
+# https://github.com/googleapis/google-api-ruby-client
+# gem "google-api-client"
+# gem 'google-api-client', '>0.7'
+
+# https://github.com/googleapis/google-api-ruby-client#using-the-clients
+# ```md
+# The client gems are named according to the pattern google-apis-<servicename>_<serviceversion>. For example, the client for the Google Drive V3 API is google-apis-drive_v3.
+# ```
+# gem 'google-api'
+gem 'google-apis-youtube_v3'
+
+# rubyデバック用gem
+# https://qiita.com/satreu16/items/0a9e7396308a3b83b88b
+# https://qiita.com/arashida/items/f5236b145aec5055bfb3
+# https://atotok.co.jp/labo/1ae604a17b60ad17fac0b7198c914ff0
+# gem 'ruby-debug-ide'
+# gem 'debase'
+# group :development do
+#   gem 'ruby-debug-ide'
+#   gem 'debase'
+# end
+
+# gem "byebug"
+# gem "ruby-debug-ide", "~> 0.7.3"
+
+# gem "debase", "~> 0.2.4"
+
+gem "pry-byebug", "~> 3.9"

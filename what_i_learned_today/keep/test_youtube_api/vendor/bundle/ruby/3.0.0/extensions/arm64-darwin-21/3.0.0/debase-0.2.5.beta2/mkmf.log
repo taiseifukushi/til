@@ -1,0 +1,79 @@
+have_header: checking for vm_core.h... -------------------- no
+
+"clang -fdeclspec -o conftest -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/arm64-darwin21 -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/backward -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0 -I. -I/Users/t.fukushi1129/.rbenv/sources/3.0.2/ruby-3.0.2 -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -fno-common -pipe conftest.c  -L. -L/Users/t.fukushi1129/.rbenv/versions/3.0.2/lib -L. -L/Users/t.fukushi1129/.rbenv/versions/3.0.2/lib  -fstack-protector-strong -L/usr/local/lib  -m64   -lruby.3.0   "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+"clang -E -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/arm64-darwin21 -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/backward -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0 -I. -I/Users/t.fukushi1129/.rbenv/sources/3.0.2/ruby-3.0.2 -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -fno-common -pipe  conftest.c -o conftest.i"
+conftest.c:3:10: fatal error: 'vm_core.h' file not found
+#include <vm_core.h>
+         ^~~~~~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- no
+
+"clang -E -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/arm64-darwin21 -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/backward -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0 -I. -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby-3.0.2-p107 -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -fno-common -pipe  conftest.c -o conftest.i"
+conftest.c:3:10: fatal error: 'vm_core.h' file not found
+#include <vm_core.h>
+         ^~~~~~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- yes
+
+"clang -E -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/arm64-darwin21 -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/backward -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0 -I. -I/Users/t.fukushi1129/Documents/tukushi/what_i_lerned_today/test_youtube_api/vendor/bundle/ruby/3.0.0/gems/debase-ruby_core_source-0.10.13/lib/debase/ruby_core_source/ruby-3.0.0-p0 -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -fno-common -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for iseq.h... -------------------- yes
+
+"clang -E -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/arm64-darwin21 -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/backward -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0 -I. -I/Users/t.fukushi1129/Documents/tukushi/what_i_lerned_today/test_youtube_api/vendor/bundle/ruby/3.0.0/gems/debase-ruby_core_source-0.10.13/lib/debase/ruby_core_source/ruby-3.0.0-p0 -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -fno-common -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <iseq.h>
+/* end */
+
+--------------------
+
+have_header: checking for version.h... -------------------- yes
+
+"clang -E -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/arm64-darwin21 -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0/ruby/backward -I/Users/t.fukushi1129/.rbenv/versions/3.0.2/include/ruby-3.0.0 -I. -I/Users/t.fukushi1129/Documents/tukushi/what_i_lerned_today/test_youtube_api/vendor/bundle/ruby/3.0.0/gems/debase-ruby_core_source-0.10.13/lib/debase/ruby_core_source/ruby-3.0.0-p0 -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -fno-common -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <version.h>
+/* end */
+
+--------------------
+
