@@ -45,8 +45,15 @@ fun MyApp() {
 }
 
 @Composable
-private fun Greetings(names: List<String> = listOf("World", "Compose")) {
-    Column(modifier = Modifier.padding(vertical = 4.dp)) {
+//private fun Greetings(names: List<String> = List(1000) { "$it" }) {
+//private fun Greetings(names: List<String> = listOf("World", "Compose")) {
+/*
+スクロール可能な列を表示するには、LazyColumn を使用します。
+LazyColumn は画面に表示されているアイテムのみをレンダリングするので、大きなリストを表示する場合は効率が良くなります。
+*/
+private fun Greetings(names: List<String> = List(1000) { "$it" } ) {
+    LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
+        items(items = names) { name ->
             Greeting(name = name)
         }
     }
@@ -86,7 +93,6 @@ private fun Greeting(name: String) {
             }
             OutlinedButton(
                 onClick = {
-                    // expanded = !expanded
                     expanded.value = !expanded.value
                 }
             ) {
