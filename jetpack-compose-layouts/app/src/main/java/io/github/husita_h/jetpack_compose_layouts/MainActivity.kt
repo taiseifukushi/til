@@ -3,6 +3,7 @@ package io.github.husita_h.jetpack_compose_layouts
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
@@ -38,8 +39,11 @@ fun Greeting(name: String) {
 }
 
 @Composable
-fun PhotographerCard() {
-    Row {
+fun PhotographerCard(modifier: Modifier = Modifier) {
+    Row(modifier
+        .padding(16.dp)
+        .clickable(onClick = { /* Ignoring onClick */ })
+        ) {
         Surface(
             modifier = Modifier.size(50.dp),
             shape = CircleShape,
