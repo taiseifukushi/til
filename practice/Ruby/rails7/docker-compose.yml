@@ -1,15 +1,9 @@
 version: '3'
 services:
   db:
-    platform: linux/x86_64
-    image: mysql:5.7
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: root
-    ports:
-      - "3306:3306"
-    volumes:
-      - ./tmp/db:/var/lib/mysql
+    image: postgres
+    environment: 
+      POSTGRES_PASSWORD: password
 
   web:
     build: .
@@ -20,4 +14,3 @@ services:
       - "3000:3000"
     depends_on:
       - db
-
