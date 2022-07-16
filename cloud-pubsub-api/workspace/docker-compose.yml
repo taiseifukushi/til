@@ -2,7 +2,10 @@ version: '3'
 services:
   web:
     build: .
-    command: bundle exec ruby app.rb -o 0.0.0.0
+    # rackアプリケーションのデフォルトのポート番号が9292
+    # -p: sinatraアプリが4567で起動するように明示する
+    # -o: Dockerコンテナの127.0.0.1を見に行ってしまうため
+    command: bundle exec rackup config.ru -p 4567 -o 0.0.0.0
     ports:
       - 4567:4567
     volumes:
