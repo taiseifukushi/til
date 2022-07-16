@@ -1,6 +1,16 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "sinatra"
-gem "webrick"
+gem 'dotenv'
+gem 'puma'
+gem 'rubocop'
+gem 'sinatra' # https://github.com/sinatra/sinatra
+gem 'sinatra-contrib'
+gem 'sinatra-reloader'
+
+group :development do
+  gem 'pry-byebug'
+end
+
+gem 'google-cloud-pubsub-v1' # https://github.com/googleapis/google-cloud-ruby/tree/main/google-cloud-pubsub-v1
