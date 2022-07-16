@@ -3,12 +3,9 @@
 source 'https://rubygems.org'
 
 gem 'rubocop'
-# https://github.com/sinatra/sinatra
-gem 'sinatra'
+gem 'sinatra' # https://github.com/sinatra/sinatra
 gem 'sinatra-contrib'
+gem 'sinatra-reloader'
 gem 'puma'
-# gem 'webrick'
 
-# ===
-# https://github.com/googleapis/google-cloud-ruby/tree/main/google-cloud-pubsub-v1
-gem "google-cloud-pubsub-v1"
+gem "google-cloud-pubsub-v1" # https://github.com/googleapis/google-cloud-ruby/tree/main/google-cloud-pubsub-v1

@@ -1,9 +1,11 @@
 require 'sinatra'
 require 'sinatra/base'
 require "sinatra/reloader"
+require "sinatra/namespace" # http://sinatrarb.com/contrib/namespace
 require "google/cloud/pubsub/v1"
 
 class App < Sinatra::Base
+  register Sinatra::Namespace
   configure :development do
     register Sinatra::Reloader
   end
@@ -30,6 +32,9 @@ class App < Sinatra::Base
   #   config.project_id  = "my-project-id"
   #   config.credentials = "path/to/keyfile.json"
   # end
-  
-  # 
+  namespace '/api' do
+    get '/' do
+      'This is api page'
+    end
+  end
 end
