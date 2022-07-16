@@ -1,6 +1,8 @@
 FROM ruby:3.1.2
 
-ADD . /app
+COPY . /app
 WORKDIR /app
 
-RUN bundle install
+RUN set -eux \
+    && bundle config --local set path 'vendor/bundle' \
+    && bundle install
