@@ -85,8 +85,8 @@ https://qiita.com/k0kubun/items/80c5a5494f53bb88dc58
 ActiveRecordでN+1クエリを潰すためにeager loadingを行う場合に使うメソッド
 - joins
 - eager_load
-- eager_load
-- eager_load
+- preload
+- includes
 
 それぞれの違い
 キーワード
