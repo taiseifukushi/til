@@ -1,0 +1,17 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
+gem "sinatra"
+
+# Server handler (thin,puma,reel,HTTP,webrick) not found. (RuntimeError)
+# 下のgemを追加で記述
+gem "webrick", "~> 1.7"
+
+gem "sinatra-reloader", "~> 1.0"
+
+gem "haml", "~> 5.2"
+
+gem "pry-byebug", "~> 3.9"
