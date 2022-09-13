@@ -4,7 +4,7 @@ Adapterは外部で必要なインターフェイスを提供し、内部に隠�
 あるオブジェクトが別のオブジェクトの代わりをする、パターンの一つ。
 
 ## memo
-
+ActiveRecord
 
 ## 参考
 https://github.com/morizyun/ruby_design_pattern_sample
