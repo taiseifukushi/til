@@ -1,0 +1,12 @@
+version: '3'
+services:
+  jupyter:
+    build: .
+    # image: rubydata/datascience-notebook
+    # command: bash -c "iruby-notebook"
+    # stdin_open: true
+    # tty: true
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan/work
