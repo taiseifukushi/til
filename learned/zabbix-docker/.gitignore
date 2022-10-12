@@ -1,0 +1,12 @@
+zbx_env/
+zbx_env*/
+.*CERT_FILE
+.*KEY_FILE
+.*CA_FILE
+
+.github/
+env_vars/
+docker-compose_*.*
+kubernetes.yaml
+LICENSE
+README.md.old
