@@ -4,16 +4,16 @@
 
 ```sh
 # $REPO 統合元のリポジトリ名
-# $ARCHIVE 統合先のリポジトリ名
+# til 統合先のリポジトリ名
 # $ACCOUNT gitのアカウント名
 
 # $REPOと$ARCHIVEは同じ階層とする
-ARCHIVE$ git remote add $REPO git@github.com:$ACCOUNT/$REPO.git
-ARCHIVE$ git fetch $REPO
-ARCHIVE$ git checkout -b $REPO $REPO/master
-ARCHIVE$ git filter-branch -f --tree-filter "mkdir $REPO && git mv -k {,.[\!.],..[\!.]}* $REPO/"
-ARCHIVE$ git checkout master
-ARCHIVE$ git merge $REPO
+til$ git remote add $REPO git@github.com:$ACCOUNT/$REPO.git
+til$ git fetch $REPO
+til$ git checkout -b $REPO $REPO/main
+til$ git filter-branch -f --tree-filter "mkdir $REPO && git mv -k {,.[\!.],..[\!.]}* $REPO/"
+til$ git checkout main
+til$ git merge --allow-unrelated-histories $REPO
 ```
 
 参考
