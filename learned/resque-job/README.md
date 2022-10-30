@@ -4,5 +4,6 @@
 
 ```sh
 QUEUE=* rake resque:work
+Resque.enqueue(Mylogger, "hoge")
 resque-web
 ```

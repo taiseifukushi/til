@@ -1,8 +1,0 @@
-development: 0.0.0.0:6379
-test: 0.0.0.0:6379
-fi: 0.0.0.0:6379
-production: 0.0.0.0:6379
-# development: localhost:6379
-# test: localhost:6379
-# fi: localhost:6379
-# production: localhost:6379
