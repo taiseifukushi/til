@@ -39,6 +39,8 @@ sudo usermod -aG kvm $USER
 ---
 
 エラー
+
+①
 ```
 invoke-rc.d: initscript lvm2-lvmpolld, action "restart" failed.
 ● lvm2-lvmpolld.service - LVM2 poll daemon
@@ -63,5 +65,6 @@ Errors were encountered while processing:
 E: Sub-process /usr/bin/dpkg returned an error code (1)
 ```
 
-
+②
+<img width="778" alt="スクリーンショット 2022-11-08 23 53 33" src="https://user-images.githubusercontent.com/71882104/200597078-41f58150-452a-4de8-a137-bd1cf37833fd.png">
 
