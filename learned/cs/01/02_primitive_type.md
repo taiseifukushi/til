@@ -1,4 +1,4 @@
-# 02_memo
+# 02_primitive_type
 
 基本的なデータ型 = プリミティブ型
 ブーリアン型 : bool
