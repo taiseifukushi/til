@@ -67,4 +67,32 @@ E: Sub-process /usr/bin/dpkg returned an error code (1)
 
 ②
 <img width="778" alt="スクリーンショット 2022-11-08 23 53 33" src="https://user-images.githubusercontent.com/71882104/200597078-41f58150-452a-4de8-a137-bd1cf37833fd.png">
+---
 
+## 2022-11-09
+
+--
+削除して、インストールし直した。
+
+```sh
+sudo apt purge lvm2 && sudo apt install lvm2
+```
+
+ok
+
+--
+ubuntu isoファイルをダウンロードした。
+https://ubuntu.com/download/desktop
+
+--
+
+### Create a new virtual machine
+- Choose ISO or CDROM install media
+  - ダウンロードしたisoファイルを選択する。
+- Choose the Operating System you are installing
+  - Ubuntu 20.04
+- Memory, CPUs, Disk Image, Name
+  - とりあえず適当
+- Finish
+  - 仮想マシンが起動
+- 
