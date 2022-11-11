@@ -95,4 +95,11 @@ https://ubuntu.com/download/desktop
   - とりあえず適当
 - Finish
   - 仮想マシンが起動
-- 
+
+--
+
+20.04をダウンロード、指定し直す。
+https://releases.ubuntu.com/20.04/
+https://releases.ubuntu.com/focal/
+https://jp.ubuntu.com/download
+
