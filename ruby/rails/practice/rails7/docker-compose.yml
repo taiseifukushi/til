@@ -1,15 +1,19 @@
 version: '3'
 services:
   db:
-    image: postgres
+    image: mysql
     # platform: linux/amd64
     environment:
       # POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      # POSTGRES_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: root
     ports:
-      - "5432:5432"
+      # - "5432:5432"
+      - "3306:3306"
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data
+      # - ./tmp/db:/var/lib/postgresql/data
+      - ./tmp/db:/var/lib/mysql
 
   # pgweb:
   #   image: sosedoff/pgweb
