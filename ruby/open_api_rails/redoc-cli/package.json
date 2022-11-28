@@ -1,10 +1,11 @@
 {
-  "name": "redoc-cli",
-  "version": "0.0.0",
-  "scripts": {
-    "generate": "generate -g ruby-on-rails -i openapi.yaml -o ./rails_codes"
-  },
-  "dependencies": {
-    "@openapitools/openapi-generator-cli": "^2.5.2"
-  }
+	"name": "redoc-cli",
+	"version": "0.0.0",
+	"scripts": {
+		"generate_rails": "npx openapi-generator-cli generate -g ruby-on-rails -i openapi.yaml -o ./rails_codes",
+		"generate_sinatra": "npx openapi-generator-cli generate -g ruby-sinatra -i openapi.yaml -o ./sinatra_codes"
+	},
+	"dependencies": {
+		"@openapitools/openapi-generator-cli": "^2.5.2"
+	}
 }

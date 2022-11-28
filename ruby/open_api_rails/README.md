@@ -15,4 +15,6 @@
         - https://openapi-generator.tech/docs/generators/ruby-on-rails/
         - >Generates a Ruby on Rails (v5) server library.
         - と書いているので5までっぽい
+- APIモードで生成されているみたい
+- xxx
 
