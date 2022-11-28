@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    ports:
+      - 8011:8080
+    volumes:
+      - ./openapi.yaml:/usr/share/nginx/html/openapi.yaml
+    environment:
+      API_URL: openapi.yaml
+  redoc:
+    image: redocly/redoc
+    ports:
+      - 8012:80
+    volumes:
+      - ./openapi.yaml:/usr/share/nginx/html/openapi.yaml
+    environment:
+      SPEC_URL: openapi.yaml
+  redoc-cli:
+    build: .
+    volumes:
+      - ./openapi:/data
