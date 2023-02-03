@@ -9,7 +9,6 @@ services:
     volumes:
       - ./jenkins_home:/var/jenkins_home
   nginx:
-    container_name: nginx
     image: nginx:alpine
     ports:
       - 80:80
