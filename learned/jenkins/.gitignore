@@ -1,2 +1,5 @@
 jenkins_home/*
 !jenkins_home/.gitkeep
+nginx/nginx.conf
+nginx/data/*
+init-letsencrypt.sh
