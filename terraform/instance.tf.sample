@@ -1,0 +1,62 @@
+# https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance
+
+resource "google_compute_instance" "instance-01" {
+  name         = "test-instance-01"
+  machine_type = "n1-standard-1"
+  # machine_type = "e2-standard-4"
+  # machine_type = "e2-micro"
+  zone         = var.zone
+
+  boot_disk {
+    initialize_params {
+      // https://cloud.google.com/compute/docs/images?hl=ja#os-compute-support
+      // https://console.cloud.google.com/compute/imagesDetail/projects/ubuntu-os-cloud/global/images/ubuntu-2204-jammy-v20230302
+      image = "ubuntu-2204-jammy-v20230302"
+    }
+  }
+
+  scratch_disk {
+    interface = "SCSI"
+  }
+
+  network_interface {
+    network    = google_compute_network.vpc_network.self_link
+    subnetwork = google_compute_subnetwork.vpc_subnet.self_link
+    // https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance#nested_access_config
+    access_config {
+      // https://cloud.google.com/network-tiers/docs/overview?hl=ja
+      // デフォルトだと"PREMIUM"が指定されるため、"STANDARD"を指定する
+      network_tier = "STANDARD"
+    }
+  }
+
+  service_account {
+    email  = var.service_account_id
+    scopes = ["cloud-platform"]
+  }
+
+  scheduling {
+    // https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance#preemptible
+    // Spot VMを利用する際は、preemptibleをtrueにする必要がある
+    preemptible = true
+    automatic_restart = false
+    // https://cloud.google.com/compute/docs/instances/spot?hl=ja
+    // Spot VMを利用する
+    // https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance#provisioning_model
+    provisioning_model = "SPOT"
+  }
+
+  metadata = {
+    "ssh-keys" = "${var.ssh_user_name}:${file("./config/sample_gce.pub")}"
+  }
+}
+
+# https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_disk
+resource "google_compute_disk" "disk-01" {
+  name  = "test-disk-01"
+  type  = "pd-standard"
+  zone  = var.zone
+  image = "ubuntu-2204-jammy-v20230302"
+  // 単位はGB
+  size = 100
+}

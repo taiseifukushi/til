@@ -1,0 +1,23 @@
+variable "service_name" {
+  default = ""
+}
+
+variable "project" {
+  default = ""
+}
+
+variable "service_account_id" {
+  default = ""
+}
+
+variable "region" {
+  default = ""
+}
+
+variable "zone" {
+  default = ""
+}
+
+variable "ssh_user_name" {
+  default = ""
+}

@@ -1,0 +1,47 @@
+# https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall
+
+resource "google_compute_network" "vpc_network" {
+  name                    = "test-instance-01-vpc"
+  auto_create_subnetworks = false
+}
+
+resource "google_compute_subnetwork" "vpc_subnet" {
+  name          = "test-instance-01-subnet"
+  ip_cidr_range = "10.0.1.0/24"
+  network       = google_compute_network.vpc_network.self_link
+  region        = var.region
+}
+
+resource "google_compute_firewall" "firewall_ingress_for_https" {
+  name      = "${var.service_name}-firewall-ingress-for-https"
+  network   = google_compute_network.vpc_network.self_link
+  direction = "INGRESS"
+  allow {
+    protocol = "tcp"
+    ports     = ["443"]
+  }
+  source_ranges = ["0.0.0.0/0"] // 制限しない
+}
+
+resource "google_compute_firewall" "firewall_ingress_for_http" {
+  name      = "${var.service_name}-firewall-ingress-for-http"
+  network   = google_compute_network.vpc_network.self_link
+  direction = "INGRESS"
+  allow {
+    protocol = "tcp"
+    ports     = ["80"]
+  }
+  source_ranges = ["0.0.0.0/0"] // 制限しない
+}
+
+resource "google_compute_firewall" "firewall_ingress_for_ssh" {
+  name      = "${var.service_name}-firewall-ingress-for-ssh"
+  network   = google_compute_network.vpc_network.self_link
+  direction = "INGRESS"
+  allow {
+    protocol = "tcp"
+    ports     = ["22"]
+  }
+  # 特定のIPアドレスのみのssh接続のみ許可したい場合はここに許可するIPアドレスを指定する
+  source_ranges = ["0.0.0.0/0"]
+}
